@@ -600,28 +600,30 @@ Error ProjectSettings::_setup(const String &p_path, const String &p_main_pack, b
 		String exec_filename = exec_path.get_file();
 		String exec_basename = exec_filename.get_basename();
 
-		// Based on the OS, it can be the exec path + '.tck' (Linux w/o extension, macOS in .app bundle)
-		// or the exec path's basename + '.tck' (Windows).
+		// Based on the OS, it can be the exec path + '.pck' or '.tck' (Linux w/o extension, macOS in .app bundle)
+		// or the exec path's basename + '.pck' or '.tck' (Windows).
 		// We need to test both possibilities as extensions for Linux binaries are optional
-		// (so both 'mygame.bin' and 'mygame' should be able to find 'mygame.tck').
+		// (so both 'mygame.bin' and 'mygame' should be able to find 'mygame.pck').
 
 #ifdef MACOS_ENABLED
 		if (!found) {
-			// Attempt to load TCK from macOS .app bundle resources.
-			found = _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_basename + ".tck"), false, 0, true) || _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_filename + ".tck"), false, 0, true);
+			// Attempt to load data pack from macOS .app bundle resources.
+			// We first attempt to load a pack with the same basename as the executable, falling back to a pack with the same name as the executable's file.
+			// For each of them, we first attempt to load a PCK, and then a TCK.
+			found = _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_basename + ".pck"), false, 0, true) || _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_basename + ".tck"), false, 0, true) || _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_filename + ".pck"), false, 0, true) || _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_filename + ".tck"), false, 0, true);
 		}
 #endif
 
 		if (!found) {
 			// Try to load data pack at the location of the executable.
-			// As mentioned above, we have two potential names to attempt.
-			found = _load_resource_pack(exec_dir.path_join(exec_basename + ".tck"), false, 0, true) || _load_resource_pack(exec_dir.path_join(exec_filename + ".tck"), false, 0, true);
+			// As mentioned above, we have two potential names to attempt, first PCK then TCK.
+			found = _load_resource_pack(exec_dir.path_join(exec_basename + ".pck"), false, 0, true) || _load_resource_pack(exec_dir.path_join(exec_basename + ".tck"), false, 0, true) || _load_resource_pack(exec_dir.path_join(exec_filename + ".pck"), false, 0, true) || _load_resource_pack(exec_dir.path_join(exec_filename + ".tck"), false, 0, true);
 		}
 
 		if (!found) {
 			// If we couldn't find them next to the executable, we attempt
-			// the current working directory. Same story, two tests.
-			found = _load_resource_pack(exec_basename + ".tck", false, 0, true) || _load_resource_pack(exec_filename + ".tck", false, 0, true);
+			// the current working directory. Same story, two tests, first PCK then TCK.
+			found = _load_resource_pack(exec_basename + ".pck", false, 0, true) || _load_resource_pack(exec_basename + ".tck", false, 0, true) || _load_resource_pack(exec_filename + ".pck", false, 0, true) || _load_resource_pack(exec_filename + ".tck", false, 0, true);
 		}
 
 		// If we opened our package, try and load our project.

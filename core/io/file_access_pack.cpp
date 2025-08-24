@@ -30,7 +30,7 @@
 
 #include "file_access_pack.h"
 
-#include "core/io/file_access_encrypted.hh"
+#include "core/io/file_access_encrypted.h"
 #include "core/object/script_language.h"
 #include "core/os/os.h"
 #include "core/version.h"

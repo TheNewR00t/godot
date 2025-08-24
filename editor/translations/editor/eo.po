@@ -2353,8 +2353,8 @@ msgstr "Propra eldona ŝablono ne trovitis."
 msgid "Template file not found: \"%s\"."
 msgstr "Ŝablona dosiero ne troviĝas: \"%s\"."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "Sur 32-bita eksportoj la enigita PCK ne eblas esti pli granda ol 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "Sur 32-bita eksportoj la enigita TCK ne eblas esti pli granda ol 4 GiB."
 
 msgid "Error requesting URL:"
 msgstr "Eraro dum demandi la URL:"

@@ -3779,9 +3779,9 @@ msgstr "Mallitiedostoa \"%s\" ei löytynyt."
 msgid "Failed to copy export template."
 msgstr "Vientimallin kopiointi epäonnistui."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr ""
-"32-bittisissä vienneissä sisällytetty PCK ei voi olla suurempi kuin 4 Gt."
+"32-bittisissä vienneissä sisällytetty TCK ei voi olla suurempi kuin 4 Gt."
 
 msgid "Plugin \"%s\" is not supported on \"%s\""
 msgstr "Liitännäistä \"%s\" ei ole tuettu alustalla \"%s\""
@@ -4078,8 +4078,8 @@ msgstr "Ominaisuuslista:"
 msgid "Encryption"
 msgstr "Salaus"
 
-msgid "Encrypt Exported PCK"
-msgstr "Salaa viety PCK-tiedosto"
+msgid "Encrypt Exported TCK"
+msgstr "Salaa viety TCK-tiedosto"
 
 msgid "Encrypt Index (File Names and Info)"
 msgstr "Salaa indeksi (tiedostonimet ja info)"
@@ -4114,8 +4114,8 @@ msgstr ""
 msgid "More Info..."
 msgstr "Lisää Tietoa..."
 
-msgid "Export PCK/ZIP..."
-msgstr "Vie PCK/ZIP..."
+msgid "Export TCK/ZIP..."
+msgstr "Vie TCK/ZIP..."
 
 msgid "Export Project..."
 msgstr "Vie projekti..."

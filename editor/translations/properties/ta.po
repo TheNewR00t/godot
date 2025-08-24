@@ -1939,7 +1939,7 @@ msgstr "ஏற்றுமதி கன்சோல் ரேப்பர்"
 msgid "Binary Format"
 msgstr "பைனரி வடிவம்"
 
-msgid "Embed PCK"
+msgid "Embed TCK"
 msgstr "பி.சி.கே."
 
 msgid "Texture Format"

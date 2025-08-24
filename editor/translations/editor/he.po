@@ -2450,8 +2450,8 @@ msgstr "קובץ התבנית לא נמצא: \"%s\"."
 msgid "Failed to copy export template."
 msgstr "נכשל בהעתקת תבנית היצוא."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "בייצוא ארכיטקטורת 32 ביט, ה PCK המובנה לא יכול לחרוג מעבר ל 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "בייצוא ארכיטקטורת 32 ביט, ה TCK המובנה לא יכול לחרוג מעבר ל 4 GiB."
 
 msgid "Plugin \"%s\" is not supported on \"%s\""
 msgstr "התוסף \"%s\" לא נתמך ב - \"%s\""

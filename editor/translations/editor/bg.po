@@ -2124,8 +2124,8 @@ msgstr ""
 msgid "Encryption Key (256-bits as hexadecimal):"
 msgstr "Ключ за шифроване (256 бита, в шестнадесетичен формат):"
 
-msgid "Export PCK/ZIP..."
-msgstr "Изнасяне на PCK/ZIP…"
+msgid "Export TCK/ZIP..."
+msgstr "Изнасяне на TCK/ZIP…"
 
 msgid "Export Project..."
 msgstr "Изнасяне на проекта…"

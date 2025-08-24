@@ -1916,8 +1916,8 @@ msgstr "დაშიფვრა"
 msgid "GDScript Export Mode:"
 msgstr "GDScript-ის გატანის რეჟიმი:"
 
-msgid "Export PCK/ZIP..."
-msgstr "PCK/ZIP-ის გატანა..."
+msgid "Export TCK/ZIP..."
+msgstr "TCK/ZIP-ის გატანა..."
 
 msgid "Export Project..."
 msgstr "პროექტის გატანა..."

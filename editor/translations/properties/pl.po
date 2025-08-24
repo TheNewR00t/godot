@@ -2344,8 +2344,8 @@ msgstr "Eksportuj otokę konsoli"
 msgid "Binary Format"
 msgstr "Format binarny"
 
-msgid "Embed PCK"
-msgstr "Osadź PCK"
+msgid "Embed TCK"
+msgstr "Osadź TCK"
 
 msgid "Texture Format"
 msgstr "Format tekstury"

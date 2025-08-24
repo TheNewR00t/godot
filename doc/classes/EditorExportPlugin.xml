@@ -213,7 +213,7 @@
 				        return false
 
 				    func _get_export_options_overrides(platform) -&gt; Dictionary:
-				        # Override "Embed PCK" to always be enabled.
+				        # Override "Embed TCK" to always be enabled.
 				        return {
 				            "binary_format/embed_pck": true,
 				        }

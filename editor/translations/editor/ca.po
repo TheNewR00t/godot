@@ -3646,9 +3646,9 @@ msgstr "No s'ha trobat el fitxer de plantilla: \"%s\"."
 msgid "Failed to copy export template."
 msgstr "No s'ha pogut copiar la plantilla d'exportació."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr ""
-"En les exportacions de 32 bits, el PCK incrustat no pot ser superior a 4 GiB."
+"En les exportacions de 32 bits, el TCK incrustat no pot ser superior a 4 GiB."
 
 msgid "Open the folder containing these templates."
 msgstr "Obriu la carpeta que conté aquestes plantilles."

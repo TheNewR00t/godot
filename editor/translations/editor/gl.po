@@ -2708,8 +2708,8 @@ msgstr "Non se encontrou un modelo de depuración personalizado."
 msgid "Custom release template not found."
 msgstr "Non se encontrou un modelo release personalizado."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "Na exportación de 32 bits o PCK integrado non pode ser maior de 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "Na exportación de 32 bits o TCK integrado non pode ser maior de 4 GiB."
 
 msgid "Error requesting URL:"
 msgstr "Erro ao solicitar a URL:"

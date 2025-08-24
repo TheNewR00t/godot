@@ -1060,14 +1060,14 @@ void EditorNode::_fs_changed() {
 				export_error = vformat("Export preset \"%s\" doesn't have a matching platform.", preset_name);
 			} else {
 				export_preset->update_value_overrides();
-				if (export_defer.pack_only) { // Only export .pck or .zip data pack.
+				if (export_defer.pack_only) { // Only export .tck or .zip data pack.
 					if (export_path.ends_with(".zip")) {
 						if (export_defer.patch) {
 							err = platform->export_zip_patch(export_preset, export_defer.debug, export_path, export_defer.patches);
 						} else {
 							err = platform->export_zip(export_preset, export_defer.debug, export_path);
 						}
-					} else if (export_path.ends_with(".pck")) {
+					} else if (export_path.ends_with(".tck")) {
 						if (export_defer.patch) {
 							err = platform->export_pack_patch(export_preset, export_defer.debug, export_path, export_defer.patches);
 						} else {

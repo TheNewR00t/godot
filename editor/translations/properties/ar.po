@@ -1357,8 +1357,8 @@ msgstr "الإصدار"
 msgid "Binary Format"
 msgstr "تنسيق ثنائي"
 
-msgid "Embed PCK"
-msgstr "تضمين PCK"
+msgid "Embed TCK"
+msgstr "تضمين TCK"
 
 msgid "Export"
 msgstr "تصدير"

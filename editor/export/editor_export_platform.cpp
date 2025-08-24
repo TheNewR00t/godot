@@ -1527,7 +1527,7 @@ Error EditorExportPlatform::export_project_files(const Ref<EditorExportPreset> &
 
 	ProjectSettings::CustomMap custom_map = get_custom_project_settings(p_preset);
 	if (path_remaps.size()) {
-		if (true) { //new remap mode, use always as it's friendlier with multiple .pck exports
+		if (true) { //new remap mode, use always as it's friendlier with multiple .tck exports
 			for (int i = 0; i < path_remaps.size(); i += 2) {
 				const String &from = path_remaps[i];
 				const String &to = path_remaps[i + 1];
@@ -1880,7 +1880,7 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 	String tmppath = EditorPaths::get_singleton()->get_temp_dir().path_join("packtmp");
 	Ref<FileAccess> ftmp = FileAccess::open(tmppath, FileAccess::WRITE);
 	if (ftmp.is_null()) {
-		add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), vformat(TTR("Cannot create file \"%s\"."), tmppath));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), vformat(TTR("Cannot create file \"%s\"."), tmppath));
 		return ERR_CANT_CREATE;
 	}
 
@@ -1897,13 +1897,13 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 
 	if (err != OK) {
 		DirAccess::remove_file_or_error(tmppath);
-		add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), TTR("Failed to export project files."));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), TTR("Failed to export project files."));
 		return err;
 	}
 
 	if (pd.file_ofs.is_empty()) {
 		DirAccess::remove_file_or_error(tmppath);
-		add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), TTR("No files or changes to export."));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), TTR("No files or changes to export."));
 		return FAILED;
 	}
 
@@ -1912,11 +1912,11 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 	Ref<FileAccess> f;
 	int64_t embed_pos = 0;
 	if (!p_embed) {
-		// Regular output to separate PCK file
+		// Regular output to separate TCK file
 		f = FileAccess::open(p_path, FileAccess::WRITE);
 		if (f.is_null()) {
 			DirAccess::remove_file_or_error(tmppath);
-			add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), vformat(TTR("Can't open file for writing at path \"%s\"."), p_path));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), vformat(TTR("Can't open file for writing at path \"%s\"."), p_path));
 			return ERR_CANT_CREATE;
 		}
 	} else {
@@ -1924,7 +1924,7 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 		f = FileAccess::open(p_path, FileAccess::READ_WRITE);
 		if (f.is_null()) {
 			DirAccess::remove_file_or_error(tmppath);
-			add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), vformat(TTR("Can't open file for reading-writing at path \"%s\"."), p_path));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), vformat(TTR("Can't open file for reading-writing at path \"%s\"."), p_path));
 			return ERR_FILE_CANT_OPEN;
 		}
 
@@ -1935,7 +1935,7 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 			*r_embedded_start = embed_pos;
 		}
 
-		// Ensure embedded PCK starts at a 64-bit multiple
+		// Ensure embedded TCK starts at a 64-bit multiple
 		int pad = f->get_position() % 8;
 		for (int i = 0; i < pad; i++) {
 			f->store_8(0);
@@ -2006,7 +2006,7 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 		}
 		fae.instantiate();
 		if (fae.is_null()) {
-			add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), TTR("Can't create encrypted file."));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), TTR("Can't create encrypted file."));
 			return ERR_CANT_CREATE;
 		}
 
@@ -2032,7 +2032,7 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 
 		err = fae->open_and_parse(f, key, FileAccessEncrypted::MODE_WRITE_AES256, false, iv);
 		if (err != OK) {
-			add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), TTR("Can't open encrypted file to write."));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), TTR("Can't open encrypted file to write."));
 			return ERR_CANT_CREATE;
 		}
 
@@ -2086,7 +2086,7 @@ Error EditorExportPlatform::save_pack(const Ref<EditorExportPreset> &p_preset, b
 	ftmp = FileAccess::open(tmppath, FileAccess::READ);
 	if (ftmp.is_null()) {
 		DirAccess::remove_file_or_error(tmppath);
-		add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), vformat(TTR("Can't open file to read from path \"%s\"."), tmppath));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), vformat(TTR("Can't open file to read from path \"%s\"."), tmppath));
 		return ERR_CANT_CREATE;
 	}
 
@@ -2159,7 +2159,7 @@ Error EditorExportPlatform::save_zip(const Ref<EditorExportPreset> &p_preset, bo
 
 	if (zd.file_count == 0) {
 		da->remove(tmppath);
-		add_message(EXPORT_MESSAGE_ERROR, TTR("Save PCK"), TTR("No files or changes to export."));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("Save TCK"), TTR("No files or changes to export."));
 		return FAILED;
 	}
 

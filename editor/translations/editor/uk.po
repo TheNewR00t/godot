@@ -5009,8 +5009,8 @@ msgstr "Не вдалося відкрити файл для читання з �
 msgid "Packing"
 msgstr "Пакування"
 
-msgid "Save PCK"
-msgstr "Збережіть PCK"
+msgid "Save TCK"
+msgstr "Збережіть TCK"
 
 msgid "Cannot create file \"%s\"."
 msgstr "Не вдалося створити файл «%s»."
@@ -5067,12 +5067,12 @@ msgstr "Не знайдено файла шаблона: «%s»."
 msgid "Failed to copy export template."
 msgstr "Не вдалося скопіювати шаблон експортування."
 
-msgid "PCK Embedding"
-msgstr "Вбудовування PCK"
+msgid "TCK Embedding"
+msgstr "Вбудовування TCK"
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr ""
-"При експортуванні у 32-бітовому режимі вбудовані PCK не можуть перевищувати "
+"При експортуванні у 32-бітовому режимі вбудовані TCK не можуть перевищувати "
 "за розміром 4 ГіБ."
 
 msgid "GDExtension"
@@ -5451,8 +5451,8 @@ msgstr "Список можливостей:"
 msgid "Encryption"
 msgstr "Шифрування"
 
-msgid "Encrypt Exported PCK"
-msgstr "Зашифрувати експортований PCK"
+msgid "Encrypt Exported TCK"
+msgstr "Зашифрувати експортований TCK"
 
 msgid "Encrypt Index (File Names and Info)"
 msgstr "Зашифрувати індекс (Назви файлів та Інформацію)"
@@ -5506,14 +5506,14 @@ msgstr "Бінарні токени (швидше завантаження)"
 msgid "Compressed binary tokens (smaller files)"
 msgstr "Стиснуті бінарні токени (менші файли)"
 
-msgid "Export PCK/ZIP..."
-msgstr "Експортувати PCK/ZIP..."
+msgid "Export TCK/ZIP..."
+msgstr "Експортувати TCK/ZIP..."
 
 msgid ""
-"Export the project resources as a PCK or ZIP package. This is not a playable "
+"Export the project resources as a TCK or ZIP package. This is not a playable "
 "build, only the project data without a Godot executable."
 msgstr ""
-"Експортуйте ресурси проєкту у вигляді PCK або ZIP-архіву. Це не ігрова "
+"Експортуйте ресурси проєкту у вигляді TCK або ZIP-архіву. Це не ігрова "
 "збірка, лише дані проєкту без виконуваного файлу Godot."
 
 msgid "Export Project..."

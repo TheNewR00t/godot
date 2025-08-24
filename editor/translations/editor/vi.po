@@ -3307,11 +3307,11 @@ msgstr "Không tìm thấy bản mẫu phát hành tùy chỉnh."
 msgid "Template file not found: \"%s\"."
 msgstr "Không tìm thấy tệp bản mẫu: \"%s\"."
 
-msgid "PCK Embedding"
-msgstr "Nhúng PCK"
+msgid "TCK Embedding"
+msgstr "Nhúng TCK"
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "Ở các bản xuất 32-bit thì PCK được nhúng vào không thể lớn hơn 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "Ở các bản xuất 32-bit thì TCK được nhúng vào không thể lớn hơn 4 GiB."
 
 msgid "Plugin \"%s\" is not supported on \"%s\""
 msgstr "Trình mở rộng \"%s\" không được hỗ trợ trên \"%s\""
@@ -3539,8 +3539,8 @@ msgstr "Danh sách tính năng:"
 msgid "Encryption"
 msgstr "Mã hóa"
 
-msgid "Encrypt Exported PCK"
-msgstr "Mã hóa PCK xuất ra"
+msgid "Encrypt Exported TCK"
+msgstr "Mã hóa TCK xuất ra"
 
 msgid ""
 "Filters to include files/folders\n"

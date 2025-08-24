@@ -2615,8 +2615,8 @@ msgstr ""
 "ফাইল/ফোল্ডার বাদ দিতে ফিল্টার\n"
 "(কমা দিয়ে আলাদা করা, যেমন: *.ctex, *.import, music/*)"
 
-msgid "Export PCK/ZIP..."
-msgstr "এক্সপোর্ট PCK/ZIP…"
+msgid "Export TCK/ZIP..."
+msgstr "এক্সপোর্ট TCK/ZIP…"
 
 msgid "Export Project..."
 msgstr "প্রকল্প এক্সপোর্ট করুন…"

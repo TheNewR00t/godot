@@ -1813,7 +1813,7 @@ msgstr "リリース"
 msgid "Binary Format"
 msgstr "バイナリフォーマット"
 
-msgid "Embed PCK"
+msgid "Embed TCK"
 msgstr "組み込みPCK"
 
 msgid "Texture Format"

@@ -40,82 +40,82 @@
 
 namespace TestPCKPacker {
 
-TEST_CASE("[PCKPacker] Pack an empty PCK file") {
+TEST_CASE("[PCKPacker] Pack an empty TCK file") {
 	PCKPacker pck_packer;
-	const String output_pck_path = TestUtils::get_temp_path("output_empty.pck");
+	const String output_pck_path = TestUtils::get_temp_path("output_empty.tck");
 	CHECK_MESSAGE(
-			pck_packer.pck_start(output_pck_path) == OK,
-			"Starting a PCK file should return an OK error code.");
+			pck_packer.tck_start(output_pck_path) == OK,
+			"Starting a TCK file should return an OK error code.");
 
 	CHECK_MESSAGE(
 			pck_packer.flush() == OK,
-			"Flushing the PCK should return an OK error code.");
+			"Flushing the TCK should return an OK error code.");
 
 	Error err;
 	Ref<FileAccess> f = FileAccess::open(output_pck_path, FileAccess::READ, &err);
 	CHECK_MESSAGE(
 			err == OK,
-			"The generated empty PCK file should be opened successfully.");
+			"The generated empty TCK file should be opened successfully.");
 	CHECK_MESSAGE(
 			f->get_length() >= 100,
-			"The generated empty PCK file shouldn't be too small (it should have the PCK header).");
+			"The generated empty TCK file shouldn't be too small (it should have the TCK header).");
 	CHECK_MESSAGE(
 			f->get_length() <= 500,
-			"The generated empty PCK file shouldn't be too large.");
+			"The generated empty TCK file shouldn't be too large.");
 }
 
 TEST_CASE("[PCKPacker] Pack empty with zero alignment invalid") {
 	PCKPacker pck_packer;
-	const String output_pck_path = TestUtils::get_temp_path("output_empty.pck");
+	const String output_pck_path = TestUtils::get_temp_path("output_empty.tck");
 	ERR_PRINT_OFF;
-	CHECK_MESSAGE(pck_packer.pck_start(output_pck_path, 0) != OK, "PCK with zero alignment should fail.");
+	CHECK_MESSAGE(pck_packer.tck_start(output_pck_path, 0) != OK, "TCK with zero alignment should fail.");
 	ERR_PRINT_ON;
 }
 
 TEST_CASE("[PCKPacker] Pack empty with invalid key") {
 	PCKPacker pck_packer;
-	const String output_pck_path = TestUtils::get_temp_path("output_empty.pck");
+	const String output_pck_path = TestUtils::get_temp_path("output_empty.tck");
 	ERR_PRINT_OFF;
-	CHECK_MESSAGE(pck_packer.pck_start(output_pck_path, 32, "") != OK, "PCK with invalid key should fail.");
+	CHECK_MESSAGE(pck_packer.tck_start(output_pck_path, 32, "") != OK, "TCK with invalid key should fail.");
 	ERR_PRINT_ON;
 }
 
-TEST_CASE("[PCKPacker] Pack a PCK file with some files and directories") {
+TEST_CASE("[PCKPacker] Pack a TCK file with some files and directories") {
 	PCKPacker pck_packer;
-	const String output_pck_path = TestUtils::get_temp_path("output_with_files.pck");
+	const String output_pck_path = TestUtils::get_temp_path("output_with_files.tck");
 	CHECK_MESSAGE(
-			pck_packer.pck_start(output_pck_path) == OK,
-			"Starting a PCK file should return an OK error code.");
+			pck_packer.tck_start(output_pck_path) == OK,
+			"Starting a TCK file should return an OK error code.");
 
 	const String base_dir = OS::get_singleton()->get_executable_path().get_base_dir();
 
 	CHECK_MESSAGE(
 			pck_packer.add_file("version.py", base_dir.path_join("../version.py"), "version.py") == OK,
-			"Adding a file to the PCK should return an OK error code.");
+			"Adding a file to the TCK should return an OK error code.");
 	CHECK_MESSAGE(
 			pck_packer.add_file("some/directories with spaces/to/create/icon.png", base_dir.path_join("../icon.png")) == OK,
-			"Adding a file to a new subdirectory in the PCK should return an OK error code.");
+			"Adding a file to a new subdirectory in the TCK should return an OK error code.");
 	CHECK_MESSAGE(
 			pck_packer.add_file("some/directories with spaces/to/create/icon.svg", base_dir.path_join("../icon.svg")) == OK,
-			"Adding a file to an existing subdirectory in the PCK should return an OK error code.");
+			"Adding a file to an existing subdirectory in the TCK should return an OK error code.");
 	CHECK_MESSAGE(
 			pck_packer.add_file("some/directories with spaces/to/create/icon.png", base_dir.path_join("../logo.png")) == OK,
-			"Overriding a non-flushed file to an existing subdirectory in the PCK should return an OK error code.");
+			"Overriding a non-flushed file to an existing subdirectory in the TCK should return an OK error code.");
 	CHECK_MESSAGE(
 			pck_packer.flush() == OK,
-			"Flushing the PCK should return an OK error code.");
+			"Flushing the TCK should return an OK error code.");
 
 	Error err;
 	Ref<FileAccess> f = FileAccess::open(output_pck_path, FileAccess::READ, &err);
 	CHECK_MESSAGE(
 			err == OK,
-			"The generated non-empty PCK file should be opened successfully.");
+			"The generated non-empty TCK file should be opened successfully.");
 	CHECK_MESSAGE(
 			f->get_length() >= 18000,
-			"The generated non-empty PCK file should be large enough to actually hold the contents specified above.");
+			"The generated non-empty TCK file should be large enough to actually hold the contents specified above.");
 	CHECK_MESSAGE(
 			f->get_length() <= 27000,
-			"The generated non-empty PCK file shouldn't be too large.");
+			"The generated non-empty TCK file shouldn't be too large.");
 }
 } // namespace TestPCKPacker
 

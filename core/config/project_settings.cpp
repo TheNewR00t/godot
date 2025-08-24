@@ -541,15 +541,15 @@ void ProjectSettings::_convert_to_last_version(int p_from_version) {
  *  - If using NetworkClient, try to lookup project file or fail.
  *  - If --main-pack was passed by the user (`p_main_pack`), load it or fail.
  *  - Search for project PCKs automatically. For each step we try loading a potential
- *    PCK, and if it doesn't work, we proceed to the next step. If any step succeeds,
+ *    TCK, and if it doesn't work, we proceed to the next step. If any step succeeds,
  *    we try loading the project settings, and abort if it fails. Steps:
- *    o Bundled PCK in the executable.
- *    o [macOS only] PCK with same basename as the binary in the .app resource dir.
- *    o PCK with same basename as the binary in the binary's directory. We handle both
- *      changing the extension to '.pck' (e.g. 'win_game.exe' -> 'win_game.pck') and
- *      appending '.pck' to the binary name (e.g. 'linux_game' -> 'linux_game.pck').
- *    o PCK with the same basename as the binary in the current working directory.
- *      Same as above for the two possible PCK file names.
+ *    o Bundled TCK in the executable.
+ *    o [macOS only] TCK with same basename as the binary in the .app resource dir.
+ *    o TCK with same basename as the binary in the binary's directory. We handle both
+ *      changing the extension to '.tck' (e.g. 'win_game.exe' -> 'win_game.tck') and
+ *      appending '.tck' to the binary name (e.g. 'linux_game' -> 'linux_game.tck').
+ *    o TCK with the same basename as the binary in the current working directory.
+ *      Same as above for the two possible TCK file names.
  *  - On relevant platforms (Android/iOS), lookup project file in OS resource path.
  *    If found, load it or fail.
  *  - Lookup project file in passed `p_path` (--path passed by the user), i.e. we
@@ -588,47 +588,47 @@ Error ProjectSettings::_setup(const String &p_path, const String &p_main_pack, b
 	String exec_path = OS::get_singleton()->get_executable_path();
 
 	if (!exec_path.is_empty()) {
-		// We do several tests sequentially until one succeeds to find a PCK,
+		// We do several tests sequentially until one succeeds to find a TCK,
 		// and if so, we attempt loading it at the end.
 
-		// Attempt with PCK bundled into executable.
+		// Attempt with TCK bundled into executable.
 		bool found = _load_resource_pack(exec_path, false, 0, true);
 
-		// Attempt with exec_name.pck.
+		// Attempt with exec_name.tck.
 		// (This is the usual case when distributing a Godot game.)
 		String exec_dir = exec_path.get_base_dir();
 		String exec_filename = exec_path.get_file();
 		String exec_basename = exec_filename.get_basename();
 
-		// Based on the OS, it can be the exec path + '.pck' (Linux w/o extension, macOS in .app bundle)
-		// or the exec path's basename + '.pck' (Windows).
+		// Based on the OS, it can be the exec path + '.tck' (Linux w/o extension, macOS in .app bundle)
+		// or the exec path's basename + '.tck' (Windows).
 		// We need to test both possibilities as extensions for Linux binaries are optional
-		// (so both 'mygame.bin' and 'mygame' should be able to find 'mygame.pck').
+		// (so both 'mygame.bin' and 'mygame' should be able to find 'mygame.tck').
 
 #ifdef MACOS_ENABLED
 		if (!found) {
-			// Attempt to load PCK from macOS .app bundle resources.
-			found = _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_basename + ".pck"), false, 0, true) || _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_filename + ".pck"), false, 0, true);
+			// Attempt to load TCK from macOS .app bundle resources.
+			found = _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_basename + ".tck"), false, 0, true) || _load_resource_pack(OS::get_singleton()->get_bundle_resource_dir().path_join(exec_filename + ".tck"), false, 0, true);
 		}
 #endif
 
 		if (!found) {
 			// Try to load data pack at the location of the executable.
 			// As mentioned above, we have two potential names to attempt.
-			found = _load_resource_pack(exec_dir.path_join(exec_basename + ".pck"), false, 0, true) || _load_resource_pack(exec_dir.path_join(exec_filename + ".pck"), false, 0, true);
+			found = _load_resource_pack(exec_dir.path_join(exec_basename + ".tck"), false, 0, true) || _load_resource_pack(exec_dir.path_join(exec_filename + ".tck"), false, 0, true);
 		}
 
 		if (!found) {
 			// If we couldn't find them next to the executable, we attempt
 			// the current working directory. Same story, two tests.
-			found = _load_resource_pack(exec_basename + ".pck", false, 0, true) || _load_resource_pack(exec_filename + ".pck", false, 0, true);
+			found = _load_resource_pack(exec_basename + ".tck", false, 0, true) || _load_resource_pack(exec_filename + ".tck", false, 0, true);
 		}
 
 		// If we opened our package, try and load our project.
 		if (found) {
 			Error err = _load_settings_text_or_binary("res://project.godot", "res://project.binary");
 			if (err == OK && !p_ignore_override) {
-				// Load overrides from the PCK and the executable location.
+				// Load overrides from the TCK and the executable location.
 				// Optional, we don't mind if either fails.
 				_load_settings_text("res://override.cfg");
 				_load_settings_text(exec_path.get_base_dir().path_join("override.cfg"));
@@ -1240,8 +1240,8 @@ Variant ProjectSettings::get_setting(const String &p_setting, const Variant &p_d
 }
 
 void ProjectSettings::refresh_global_class_list() {
-	// This is called after mounting a new PCK file to pick up class changes.
-	is_global_class_list_loaded = false; // Make sure we read from the freshly mounted PCK.
+	// This is called after mounting a new TCK file to pick up class changes.
+	is_global_class_list_loaded = false; // Make sure we read from the freshly mounted TCK.
 	Array script_classes = get_global_class_list();
 	for (int i = 0; i < script_classes.size(); i++) {
 		Dictionary c = script_classes[i];

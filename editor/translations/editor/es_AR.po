@@ -3900,9 +3900,9 @@ msgstr "Plantilla debug personalizada no encontrada."
 msgid "Custom release template not found."
 msgstr "Plantilla release personalizada no encontrada."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr ""
-"En la exportación de 32 bits el PCK embebido no puede ser mayor de 4 GiB."
+"En la exportación de 32 bits el TCK embebido no puede ser mayor de 4 GiB."
 
 msgid "Open the folder containing these templates."
 msgstr "Abrir la carpeta que contiene estas plantillas."

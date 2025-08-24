@@ -2366,8 +2366,8 @@ msgstr "Экспортировать оболочку консоли"
 msgid "Binary Format"
 msgstr "Бинарный формат"
 
-msgid "Embed PCK"
-msgstr "Встроить PCK"
+msgid "Embed TCK"
+msgstr "Встроить TCK"
 
 msgid "Texture Format"
 msgstr "Формат текстур"

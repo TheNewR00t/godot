@@ -2630,8 +2630,8 @@ msgstr "Mallifaili ei leitud: \"%s\"."
 msgid "Failed to copy export template."
 msgstr "Eksportmalli kopeerimine ebaõnnestus."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "32-bitise ekspordi puhul ei saa manustatud PCK olla suurem kui 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "32-bitise ekspordi puhul ei saa manustatud TCK olla suurem kui 4 GiB."
 
 msgid "Open the folder containing these templates."
 msgstr "Avage neid malle sisaldav kaust."
@@ -2902,8 +2902,8 @@ msgstr "Funktsionaalsuse loend:"
 msgid "Encryption"
 msgstr "Krüpteerimine"
 
-msgid "Encrypt Exported PCK"
-msgstr "Eksporditud PCK krüpteerimine"
+msgid "Encrypt Exported TCK"
+msgstr "Eksporditud TCK krüpteerimine"
 
 msgid "Encrypt Index (File Names and Info)"
 msgstr "Indeksi krüptimine (failinimed ja teave)"
@@ -2938,8 +2938,8 @@ msgstr ""
 msgid "More Info..."
 msgstr "Rohkem Infot..."
 
-msgid "Export PCK/ZIP..."
-msgstr "Ekspordi PCK/ZIP..."
+msgid "Export TCK/ZIP..."
+msgstr "Ekspordi TCK/ZIP..."
 
 msgid "Export Project..."
 msgstr "Ekspordi Projekt..."

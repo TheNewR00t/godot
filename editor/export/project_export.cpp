@@ -1220,14 +1220,14 @@ void ProjectExportDialog::_export_pck_zip_selected(const String &p_path) {
 		} else {
 			platform->export_zip(current, export_debug, p_path);
 		}
-	} else if (p_path.ends_with(".pck")) {
+	} else if (p_path.ends_with(".tck")) {
 		if (export_as_patch) {
 			platform->export_pack_patch(current, export_debug, p_path);
 		} else {
 			platform->export_pack(current, export_debug, p_path);
 		}
 	} else {
-		ERR_FAIL_MSG("Path must end with .pck or .zip");
+		ERR_FAIL_MSG("Path must end with .tck or .zip");
 	}
 }
 
@@ -1583,7 +1583,7 @@ ProjectExportDialog::ProjectExportDialog() {
 	patch_vb->add_margin_child(TTR("Base Packs:"), patches, true);
 
 	patch_dialog = memnew(EditorFileDialog);
-	patch_dialog->add_filter("*.pck", TTR("Godot Project Pack"));
+	patch_dialog->add_filter("*.tck", TTR("Godot Project Pack"));
 	patch_dialog->set_access(EditorFileDialog::ACCESS_FILESYSTEM);
 	patch_dialog->set_file_mode(EditorFileDialog::FILE_MODE_OPEN_FILE);
 	patch_dialog->connect("file_selected", callable_mp(this, &ProjectExportDialog::_patch_file_selected));
@@ -1626,7 +1626,7 @@ ProjectExportDialog::ProjectExportDialog() {
 
 	enc_pck = memnew(CheckButton);
 	enc_pck->connect(SceneStringName(toggled), callable_mp(this, &ProjectExportDialog::_enc_pck_changed));
-	enc_pck->set_text(TTR("Encrypt Exported PCK"));
+	enc_pck->set_text(TTR("Encrypt Exported TCK"));
 	sec_vb->add_child(enc_pck);
 
 	enc_directory = memnew(CheckButton);
@@ -1705,8 +1705,8 @@ ProjectExportDialog::ProjectExportDialog() {
 	// Export buttons, dialogs and errors.
 
 	set_cancel_button_text(TTR("Close"));
-	set_ok_button_text(TTR("Export PCK/ZIP..."));
-	get_ok_button()->set_tooltip_text(TTR("Export the project resources as a PCK or ZIP package. This is not a playable build, only the project data without a Godot executable."));
+	set_ok_button_text(TTR("Export TCK/ZIP..."));
+	get_ok_button()->set_tooltip_text(TTR("Export the project resources as a TCK or ZIP package. This is not a playable build, only the project data without a Godot executable."));
 	get_ok_button()->set_disabled(true);
 
 	export_button = add_button(TTR("Export Project..."), !DisplayServer::get_singleton()->get_swap_cancel_ok(), "export");
@@ -1730,7 +1730,7 @@ ProjectExportDialog::ProjectExportDialog() {
 
 	export_pck_zip = memnew(EditorFileDialog);
 	export_pck_zip->add_filter("*.zip", TTR("ZIP File"));
-	export_pck_zip->add_filter("*.pck", TTR("Godot Project Pack"));
+	export_pck_zip->add_filter("*.tck", TTR("Godot Project Pack"));
 	export_pck_zip->set_access(EditorFileDialog::ACCESS_FILESYSTEM);
 	export_pck_zip->set_file_mode(EditorFileDialog::FILE_MODE_SAVE_FILE);
 	add_child(export_pck_zip);

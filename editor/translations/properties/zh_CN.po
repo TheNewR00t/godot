@@ -2338,8 +2338,8 @@ msgstr "导出控制台封装"
 msgid "Binary Format"
 msgstr "二进制格式"
 
-msgid "Embed PCK"
-msgstr "内嵌 PCK"
+msgid "Embed TCK"
+msgstr "内嵌 TCK"
 
 msgid "Texture Format"
 msgstr "纹理格式"

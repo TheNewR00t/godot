@@ -777,7 +777,7 @@ Table of contents:
 - Add metadata for `char16_t` and `char32_t` ([GH-95840](https://github.com/godotengine/godot/pull/95840)).
 - Fix C# code example for `Object._get_property_list` ([GH-96021](https://github.com/godotengine/godot/pull/96021)).
 - Fix build logger unable to handle an event without an associated file ([GH-96293](https://github.com/godotengine/godot/pull/96293)).
-- Clear existing data directory extracted from PCK ([GH-96301](https://github.com/godotengine/godot/pull/96301)).
+- Clear existing data directory extracted from TCK ([GH-96301](https://github.com/godotengine/godot/pull/96301)).
 - Generate `ReadOnlySpan<T>` Overloads for GodotSharp APIs ([GH-96329](https://github.com/godotengine/godot/pull/96329)).
 - Use export platform to determine the target OS and log errors ([GH-96335](https://github.com/godotengine/godot/pull/96335)).
 - Fix building with `deprecated=no` ([GH-96570](https://github.com/godotengine/godot/pull/96570)).
@@ -1122,7 +1122,7 @@ Table of contents:
 - Add missing period for sentences in classref ([GH-97231](https://github.com/godotengine/godot/pull/97231)).
 - Clarify docs for when toggling `button_pressed` emits `toggled` ([GH-97274](https://github.com/godotengine/godot/pull/97274)).
 - Document that `OptimizedTranslation.generate()` only works in editor ([GH-97284](https://github.com/godotengine/godot/pull/97284)).
-- Clarify PCK path argument in `PCKPacker.pck_start` ([GH-97286](https://github.com/godotengine/godot/pull/97286)).
+- Clarify TCK path argument in `PCKPacker.tck_start` ([GH-97286](https://github.com/godotengine/godot/pull/97286)).
 - Fix a typo in make_rst.py (Packedfloat64Array -> PackedFloat64Array) ([GH-97338](https://github.com/godotengine/godot/pull/97338)).
 - Add descriptions to RDVertexAttribute's properties ([GH-97346](https://github.com/godotengine/godot/pull/97346)).
 - Refactor signal documentation to improve clarity ([GH-97357](https://github.com/godotengine/godot/pull/97357)).
@@ -1708,7 +1708,7 @@ Table of contents:
 - Expose `get_export_option_visibility` to editor plugins ([GH-96980](https://github.com/godotengine/godot/pull/96980)).
 - Add ability to export patch packs ([GH-97118](https://github.com/godotengine/godot/pull/97118)).
 - Ensure excluded GDExtension files are not included in `extension_list.cfg` ([GH-97216](https://github.com/godotengine/godot/pull/97216)).
-- Add ability for PCK patches to remove files ([GH-97356](https://github.com/godotengine/godot/pull/97356)).
+- Add ability for TCK patches to remove files ([GH-97356](https://github.com/godotengine/godot/pull/97356)).
 - Add support for Android Themed Icons (monochrome) ([GH-97517](https://github.com/godotengine/godot/pull/97517)).
 - [Android editor] Enable automatic install of exported apks for the Android editor ([GH-97631](https://github.com/godotengine/godot/pull/97631)).
 - GDExtension: Improve error messages during export ([GH-97765](https://github.com/godotengine/godot/pull/97765)).
@@ -1721,7 +1721,7 @@ Table of contents:
 - Fix monochrome icon, add warning when it's not specified ([GH-98603](https://github.com/godotengine/godot/pull/98603)).
 - Editor: Copy encryption and script settings on export preset duplication ([GH-98739](https://github.com/godotengine/godot/pull/98739)).
 - GDExtension: Improve macOS library loading/export ([GH-98809](https://github.com/godotengine/godot/pull/98809)).
-- Allow setting custom initialization vector for FileAccessEncrypted. Add export setting to set static seed for PCK encryption initialization vectors ([GH-98918](https://github.com/godotengine/godot/pull/98918)).
+- Allow setting custom initialization vector for FileAccessEncrypted. Add export setting to set static seed for TCK encryption initialization vectors ([GH-98918](https://github.com/godotengine/godot/pull/98918)).
 - Add `CATEGORY_UNDEFINED` option in Android export ([GH-98971](https://github.com/godotengine/godot/pull/98971)).
 - iOS: Add options to specify additional entitlements and capabilities in the export settings ([GH-99051](https://github.com/godotengine/godot/pull/99051)).
 - Linux: Use safe IDs for native file dialog options. Show extensions in export dialog ([GH-99110](https://github.com/godotengine/godot/pull/99110)).

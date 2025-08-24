@@ -2356,8 +2356,8 @@ msgstr "Envoltura de Consola de Exportación"
 msgid "Binary Format"
 msgstr "Formato Binario"
 
-msgid "Embed PCK"
-msgstr "PCK Embebido"
+msgid "Embed TCK"
+msgstr "TCK Embebido"
 
 msgid "Texture Format"
 msgstr "Formato de Textura"

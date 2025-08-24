@@ -2284,8 +2284,8 @@ msgstr "Експорт консольної оболонки"
 msgid "Binary Format"
 msgstr "Двійковий формат"
 
-msgid "Embed PCK"
-msgstr "Вбудувати PCK"
+msgid "Embed TCK"
+msgstr "Вбудувати TCK"
 
 msgid "Texture Format"
 msgstr "Формат текстури"

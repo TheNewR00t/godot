@@ -4992,7 +4992,7 @@ msgstr "パス \"%s\" からファイルを開けませんでした。"
 msgid "Packing"
 msgstr "パック中"
 
-msgid "Save PCK"
+msgid "Save TCK"
 msgstr "PCKの保存"
 
 msgid "Cannot create file \"%s\"."
@@ -5050,10 +5050,10 @@ msgstr "テンプレートファイルが見つかりません: \"%s\"。"
 msgid "Failed to copy export template."
 msgstr "エクスポートテンプレートのコピーに失敗しました。"
 
-msgid "PCK Embedding"
+msgid "TCK Embedding"
 msgstr "PCKの埋め込み"
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr "32ビットのエクスポートでは、組み込みPCKは4GiBを超えることはできません。"
 
 msgid "GDExtension"
@@ -5436,7 +5436,7 @@ msgstr "機能一覧:"
 msgid "Encryption"
 msgstr "暗号化"
 
-msgid "Encrypt Exported PCK"
+msgid "Encrypt Exported TCK"
 msgstr "エクスポートされたPCKの暗号化"
 
 msgid "Encrypt Index (File Names and Info)"
@@ -5490,14 +5490,14 @@ msgstr "バイナリトークン(高速な読み込み)"
 msgid "Compressed binary tokens (smaller files)"
 msgstr "圧縮されたバイナリトークン (より小さなファイル)"
 
-msgid "Export PCK/ZIP..."
-msgstr "PCK/Zipのエクスポート..."
+msgid "Export TCK/ZIP..."
+msgstr "TCK/Zipのエクスポート..."
 
 msgid ""
-"Export the project resources as a PCK or ZIP package. This is not a playable "
+"Export the project resources as a TCK or ZIP package. This is not a playable "
 "build, only the project data without a Godot executable."
 msgstr ""
-"プロジェクトリソースを PCK または ZIP パッケージとしてエクスポートします。これ"
+"プロジェクトリソースを TCK または ZIP パッケージとしてエクスポートします。これ"
 "はプレイ可能なビルドではなく、Godot実行ファイルを含まないプロジェクトデータの"
 "みです。"
 

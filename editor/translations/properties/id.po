@@ -1797,8 +1797,8 @@ msgstr "Export Pembungkus Konsol"
 msgid "Binary Format"
 msgstr "Format Biner"
 
-msgid "Embed PCK"
-msgstr "Tanamkan PCK"
+msgid "Embed TCK"
+msgstr "Tanamkan TCK"
 
 msgid "Texture Format"
 msgstr "Format Tekstur"

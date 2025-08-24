@@ -2773,9 +2773,9 @@ msgstr "Δεν βρέθηκε το αρχείο προτύπου: \"%s\"."
 msgid "Failed to copy export template."
 msgstr "Απέτυχε η αντιγραφή προτύπου εξαγωγής."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr ""
-"Σε εξαγωγές 32-bit, το ενσωματωμένο PCK δεν μπορεί να υπερβαίνει τα 4 GiB."
+"Σε εξαγωγές 32-bit, το ενσωματωμένο TCK δεν μπορεί να υπερβαίνει τα 4 GiB."
 
 msgid "Error requesting URL:"
 msgstr "Σφάλμα αίτησης URL:"

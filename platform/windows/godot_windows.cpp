@@ -36,7 +36,7 @@
 #include <stdio.h>
 
 // For export templates, add a section; the exporter will patch it to enclose
-// the data appended to the executable (bundled PCK).
+// the data appended to the executable (bundled TCK).
 #ifndef TOOLS_ENABLED
 #if defined _MSC_VER
 #pragma section("pck", read)

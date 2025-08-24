@@ -2294,7 +2294,7 @@ msgstr "匯出控制台封裝"
 msgid "Binary Format"
 msgstr "二進位格式"
 
-msgid "Embed PCK"
+msgid "Embed TCK"
 msgstr "內嵌PCK"
 
 msgid "Texture Format"

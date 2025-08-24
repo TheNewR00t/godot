@@ -2090,8 +2090,8 @@ msgstr "Exportovat wrapper konzole"
 msgid "Binary Format"
 msgstr "Binární formát"
 
-msgid "Embed PCK"
-msgstr "Vložit PCK"
+msgid "Embed TCK"
+msgstr "Vložit TCK"
 
 msgid "Texture Format"
 msgstr "Formát textur"

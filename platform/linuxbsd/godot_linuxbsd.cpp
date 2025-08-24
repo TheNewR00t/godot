@@ -42,7 +42,7 @@
 #endif
 
 // For export templates, add a section; the exporter will patch it to enclose
-// the data appended to the executable (bundled PCK).
+// the data appended to the executable (bundled TCK).
 #if !defined(TOOLS_ENABLED) && defined(__GNUC__)
 static const char dummy[8] __attribute__((section("pck"), used)) = { 0 };
 

@@ -54,7 +54,7 @@ complete -c godot -l quit -d "Quit after the first iteration"
 complete -c godot -s l -l language -d "Use a specific locale (<locale> being a two-letter code)" -x
 complete -c godot -l path -d "Path to a project (<directory> must contain a 'project.godot' file)" -r
 complete -c godot -s u -l upwards -d "Scan folders upwards for project.godot file"
-complete -c godot -l main-pack -d "Path to a pack (.pck) file to load" -r
+complete -c godot -l main-pack -d "Path to a pack (.tck) file to load" -r
 complete -c godot -l render-thread -d "Set the render thread mode" -x -a "unsafe safe separate"
 complete -c godot -l remote-fs -d "Use a remote filesystem (<host/IP>[:<port>] address)" -x
 complete -c godot -l remote-fs-password -d "Password for remote filesystem" -x
@@ -104,7 +104,7 @@ complete -c godot -s s -l script -d "Run a script" -r
 complete -c godot -l check-only -d "Only parse for errors and quit (use with --script)"
 complete -c godot -l export-release -d "Export the project in release mode using the given preset and output path" -x
 complete -c godot -l export-debug -d "Export the project in debug mode using the given preset and output path" -x
-complete -c godot -l export-pack -d "Export the project data only as a PCK or ZIP file using the given preset and output path" -x
+complete -c godot -l export-pack -d "Export the project data only as a TCK or ZIP file using the given preset and output path" -x
 complete -c godot -l convert-3to4 -d "Converts project from Godot 3.x to Godot 4.x"
 complete -c godot -l validate-conversion-3to4 -d "Shows what elements will be renamed when converting project from Godot 3.x to Godot 4.x"
 complete -c godot -l doctool -d "Dump the engine API reference to the given path in XML format, merging if existing files are found" -r

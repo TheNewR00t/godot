@@ -8,19 +8,19 @@
 		[codeblocks]
 		[gdscript]
 		var packer = PCKPacker.new()
-		packer.pck_start("test.pck")
+		packer.tck_start("test.tck")
 		packer.add_file("res://text.txt", "text.txt")
 		packer.flush()
 		[/gdscript]
 		[csharp]
 		var packer = new PckPacker();
-		packer.PckStart("test.pck");
+		packer.tckStart("test.tck");
 		packer.AddFile("res://text.txt", "text.txt");
 		packer.Flush();
 		[/csharp]
 		[/codeblocks]
-		The above [PCKPacker] creates package [code]test.pck[/code], then adds a file named [code]text.txt[/code] at the root of the package.
-		[b]Note:[/b] PCK is Godot's own pack file format. To create ZIP archives that can be read by any program, use [ZIPPacker] instead.
+		The above [PCKPacker] creates package [code]test.tck[/code], then adds a file named [code]text.txt[/code] at the root of the package.
+		[b]Note:[/b] TCK is Godot's own pack file format. To create ZIP archives that can be read by any program, use [ZIPPacker] instead.
 	</description>
 	<tutorials>
 	</tutorials>
@@ -31,14 +31,14 @@
 			<param index="1" name="source_path" type="String" />
 			<param index="2" name="encrypt" type="bool" default="false" />
 			<description>
-				Adds the [param source_path] file to the current PCK package at the [param target_path] internal path. The [code]res://[/code] prefix for [param target_path] is optional and stripped internally.
+				Adds the [param source_path] file to the current TCK package at the [param target_path] internal path. The [code]res://[/code] prefix for [param target_path] is optional and stripped internally.
 			</description>
 		</method>
 		<method name="add_file_removal">
 			<return type="int" enum="Error" />
 			<param index="0" name="target_path" type="String" />
 			<description>
-				Registers a file removal of the [param target_path] internal path to the PCK. This is mainly used for patches. If the file at this path has been loaded from a previous PCK, it will be removed. The [code]res://[/code] prefix for [param target_path] is optional and stripped internally.
+				Registers a file removal of the [param target_path] internal path to the TCK. This is mainly used for patches. If the file at this path has been loaded from a previous TCK, it will be removed. The [code]res://[/code] prefix for [param target_path] is optional and stripped internally.
 			</description>
 		</method>
 		<method name="flush">
@@ -55,7 +55,7 @@
 			<param index="2" name="key" type="String" default="&quot;0000000000000000000000000000000000000000000000000000000000000000&quot;" />
 			<param index="3" name="encrypt_directory" type="bool" default="false" />
 			<description>
-				Creates a new PCK file at the file path [param pck_path]. The [code].pck[/code] file extension isn't added automatically, so it should be part of [param pck_path] (even though it's not required).
+				Creates a new TCK file at the file path [param pck_path]. The [code].tck[/code] file extension isn't added automatically, so it should be part of [param pck_path] (even though it's not required).
 			</description>
 		</method>
 	</methods>

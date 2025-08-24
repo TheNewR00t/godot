@@ -293,7 +293,7 @@ Error EditorExportPlatformWindows::export_project(const Ref<EditorExportPreset> 
 		Ref<DirAccess> tmp_dir = DirAccess::create_for_path(path.get_base_dir());
 		err = tmp_dir->rename(pck_path, path);
 		if (err != OK) {
-			add_message(EXPORT_MESSAGE_ERROR, TTR("PCK Embedding"), vformat(TTR("Failed to rename temporary file \"%s\"."), pck_path));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("TCK Embedding"), vformat(TTR("Failed to rename temporary file \"%s\"."), pck_path));
 		}
 	}
 
@@ -859,13 +859,13 @@ Error EditorExportPlatformWindows::fixup_embedded_pck(const String &p_path, int6
 	// Patch the header of the "pck" section in the PE file so that it corresponds to the embedded data
 
 	if (p_embedded_size + p_embedded_start >= 0x100000000) { // Check for total executable size
-		add_message(EXPORT_MESSAGE_ERROR, TTR("PCK Embedding"), TTR("Windows executables cannot be >= 4 GiB."));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("TCK Embedding"), TTR("Windows executables cannot be >= 4 GiB."));
 		return ERR_INVALID_DATA;
 	}
 
 	Ref<FileAccess> f = FileAccess::open(p_path, FileAccess::READ_WRITE);
 	if (f.is_null()) {
-		add_message(EXPORT_MESSAGE_ERROR, TTR("PCK Embedding"), vformat(TTR("Failed to open executable file \"%s\"."), p_path));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("TCK Embedding"), vformat(TTR("Failed to open executable file \"%s\"."), p_path));
 		return ERR_CANT_OPEN;
 	}
 
@@ -877,7 +877,7 @@ Error EditorExportPlatformWindows::fixup_embedded_pck(const String &p_path, int6
 		f->seek(pe_pos);
 		uint32_t magic = f->get_32();
 		if (magic != 0x00004550) {
-			add_message(EXPORT_MESSAGE_ERROR, TTR("PCK Embedding"), TTR("Executable file header corrupted."));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("TCK Embedding"), TTR("Executable file header corrupted."));
 			return ERR_FILE_CORRUPT;
 		}
 	}
@@ -928,7 +928,7 @@ Error EditorExportPlatformWindows::fixup_embedded_pck(const String &p_path, int6
 	}
 
 	if (!found) {
-		add_message(EXPORT_MESSAGE_ERROR, TTR("PCK Embedding"), TTR("Executable \"pck\" section not found."));
+		add_message(EXPORT_MESSAGE_ERROR, TTR("TCK Embedding"), TTR("Executable \"pck\" section not found."));
 		return ERR_FILE_CORRUPT;
 	}
 	return OK;

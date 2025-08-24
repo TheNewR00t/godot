@@ -2375,8 +2375,8 @@ msgstr "Exporter le wrapper de console"
 msgid "Binary Format"
 msgstr "Format Binaire"
 
-msgid "Embed PCK"
-msgstr "Intégrer PCK"
+msgid "Embed TCK"
+msgstr "Intégrer TCK"
 
 msgid "Texture Format"
 msgstr "Format de la texture"

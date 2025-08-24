@@ -196,7 +196,7 @@ bool PackedSourcePCK::try_open_pack(const String &p_path, bool p_replace_files, 
 
 	bool pck_header_found = false;
 
-	// Search for the header at the start offset - standalone PCK file.
+	// Search for the header at the start offset - standalone TCK file.
 	f->seek(p_offset);
 	uint32_t magic = f->get_32();
 	if (magic == PACK_HEADER_MAGIC) {
@@ -212,13 +212,13 @@ bool PackedSourcePCK::try_open_pack(const String &p_path, bool p_replace_files, 
 
 		int64_t pck_off = OS::get_singleton()->get_embedded_pck_offset();
 		if (pck_off != 0) {
-			// Search for the header, in case PCK start and section have different alignment.
+			// Search for the header, in case TCK start and section have different alignment.
 			for (int i = 0; i < 8; i++) {
 				f->seek(pck_off);
 				magic = f->get_32();
 				if (magic == PACK_HEADER_MAGIC) {
 #ifdef DEBUG_ENABLED
-					print_verbose("PCK header found in executable pck section, loading from offset 0x" + String::num_int64(pck_off - 4, 16));
+					print_verbose("TCK header found in executable pck section, loading from offset 0x" + String::num_int64(pck_off - 4, 16));
 #endif
 					pck_header_found = true;
 					break;
@@ -246,7 +246,7 @@ bool PackedSourcePCK::try_open_pack(const String &p_path, bool p_replace_files, 
 			magic = f->get_32();
 			if (magic == PACK_HEADER_MAGIC) {
 #ifdef DEBUG_ENABLED
-				print_verbose("PCK header found at the end of executable, loading from offset 0x" + String::num_int64(f->get_position() - 4, 16));
+				print_verbose("TCK header found at the end of executable, loading from offset 0x" + String::num_int64(f->get_position() - 4, 16));
 #endif
 				pck_header_found = true;
 			}
@@ -413,8 +413,8 @@ Ref<FileAccess> PackedSourcePCK::get_file(const String &p_path, PackedData::Pack
 //////////////////////////////////////////////////////////////////
 
 bool PackedSourceDirectory::try_open_pack(const String &p_path, bool p_replace_files, uint64_t p_offset) {
-	// Load with offset feature only supported for PCK files.
-	ERR_FAIL_COND_V_MSG(p_offset != 0, false, "Invalid PCK data. Note that loading files with a non-zero offset isn't supported with directories.");
+	// Load with offset feature only supported for TCK files.
+	ERR_FAIL_COND_V_MSG(p_offset != 0, false, "Invalid TCK data. Note that loading files with a non-zero offset isn't supported with directories.");
 
 	if (p_path != "res://") {
 		return false;
@@ -735,7 +735,7 @@ uint64_t DirAccessPack::get_space_left() {
 }
 
 String DirAccessPack::get_filesystem_type() const {
-	return "PCK";
+	return "TCK";
 }
 
 DirAccessPack::DirAccessPack() {

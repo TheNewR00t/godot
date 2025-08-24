@@ -4953,8 +4953,8 @@ msgstr "نمی‌توان پرونده را برای خواندن در مسیر 
 msgid "Packing"
 msgstr "بسته بندی"
 
-msgid "Save PCK"
-msgstr "ذخیره‌سازی PCK"
+msgid "Save TCK"
+msgstr "ذخیره‌سازی TCK"
 
 msgid "Cannot create file \"%s\"."
 msgstr "نمی‌توان پروندهٔ «%s» را ساخت."
@@ -5011,10 +5011,10 @@ msgstr "پروندهٔ قالب یافت نشد: «%s»."
 msgid "Failed to copy export template."
 msgstr "ناکامی در روگرفتن قالب برون‌برد."
 
-msgid "PCK Embedding"
+msgid "TCK Embedding"
 msgstr "نهادینه‌سازی پی.سی.کی"
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
 msgstr ""
 "در برون‌بردهای ۳۲ بیتی پی.سی.کی نهادینه‌شده نمی‌تواند بزرگتر از ۴ گیبی‌بایت باشد."
 
@@ -5393,8 +5393,8 @@ msgstr "فهرست ویژگی‌ها:"
 msgid "Encryption"
 msgstr "رمزبندی"
 
-msgid "Encrypt Exported PCK"
-msgstr "رمزبندی PCK برون‌برد شده"
+msgid "Encrypt Exported TCK"
+msgstr "رمزبندی TCK برون‌برد شده"
 
 msgid "Encrypt Index (File Names and Info)"
 msgstr "اندیس رمزبندی (نام پرونده‌ها و اطلاعات)"
@@ -5447,14 +5447,14 @@ msgstr "توکن‌های دودویی (بارگیری تندتر)"
 msgid "Compressed binary tokens (smaller files)"
 msgstr "توکن‌های دودویی فشرده (پرونده‌های کوچکتر)"
 
-msgid "Export PCK/ZIP..."
-msgstr "برون‌برد PCK/ZIP..."
+msgid "Export TCK/ZIP..."
+msgstr "برون‌برد TCK/ZIP..."
 
 msgid ""
-"Export the project resources as a PCK or ZIP package. This is not a playable "
+"Export the project resources as a TCK or ZIP package. This is not a playable "
 "build, only the project data without a Godot executable."
 msgstr ""
-"برون‌برد بنمایه‌های پروژه به‌عنوان بستهٔ PCK یا ZIP. این ساخت تنها دادهٔ پروژه "
+"برون‌برد بنمایه‌های پروژه به‌عنوان بستهٔ TCK یا ZIP. این ساخت تنها دادهٔ پروژه "
 "بدون پروندهٔ اجراپذیر گودوت می‌باشد و بازی‌شدنی نیست."
 
 msgid "Export Project..."

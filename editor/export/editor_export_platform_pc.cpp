@@ -187,7 +187,7 @@ Error EditorExportPlatformPC::export_project_data(const Ref<EditorExportPreset> 
 	if (p_preset->get("binary_format/embed_pck")) {
 		pck_path = p_path;
 	} else {
-		pck_path = p_path.get_basename() + ".pck";
+		pck_path = p_path.get_basename() + ".tck";
 	}
 
 	Vector<SharedObject> so_files;
@@ -197,7 +197,7 @@ Error EditorExportPlatformPC::export_project_data(const Ref<EditorExportPreset> 
 	Error err = save_pack(p_preset, p_debug, pck_path, &so_files, nullptr, nullptr, p_preset->get("binary_format/embed_pck"), &embedded_pos, &embedded_size);
 	if (err == OK && p_preset->get("binary_format/embed_pck")) {
 		if (embedded_size >= 0x100000000 && String(p_preset->get("binary_format/architecture")).contains("32")) {
-			add_message(EXPORT_MESSAGE_ERROR, TTR("PCK Embedding"), TTR("On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."));
+			add_message(EXPORT_MESSAGE_ERROR, TTR("TCK Embedding"), TTR("On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."));
 			return ERR_INVALID_PARAMETER;
 		}
 

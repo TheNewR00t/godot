@@ -2248,8 +2248,8 @@ msgstr "Easpórtáil fillteán consóil"
 msgid "Binary Format"
 msgstr "Formáid Dhénártha"
 
-msgid "Embed PCK"
-msgstr "Leabú PCK"
+msgid "Embed TCK"
+msgstr "Leabú TCK"
 
 msgid "Texture Format"
 msgstr "Formáid Uigeachta"

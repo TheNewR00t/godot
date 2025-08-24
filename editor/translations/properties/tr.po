@@ -2343,8 +2343,8 @@ msgstr "Dışa Aktarma Uç-birim Sarmalayıcı"
 msgid "Binary Format"
 msgstr "İkili-tip Biçimi"
 
-msgid "Embed PCK"
-msgstr "PCK'yi Göm"
+msgid "Embed TCK"
+msgstr "TCK'yi Göm"
 
 msgid "Texture Format"
 msgstr "Doku Biçimi"

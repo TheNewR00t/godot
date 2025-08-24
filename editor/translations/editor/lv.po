@@ -2430,8 +2430,8 @@ msgstr "Pielāgots atkļūdošanas šablons nav atrasts."
 msgid "Custom release template not found."
 msgstr "Pielāgots relīzes šablons nav atrasts."
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "Pie 32-bitu eksportēšanas, iepakotais PCK nevar būt lielāks par 4GB."
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "Pie 32-bitu eksportēšanas, iepakotais TCK nevar būt lielāks par 4GB."
 
 msgid "Uninstall these templates."
 msgstr "Atinstalēt šos šablonus."

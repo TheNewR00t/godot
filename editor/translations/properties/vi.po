@@ -1195,8 +1195,8 @@ msgstr "Phát hành"
 msgid "Binary Format"
 msgstr "Định dạng nhị phân"
 
-msgid "Embed PCK"
-msgstr "PCK nhúng"
+msgid "Embed TCK"
+msgstr "TCK nhúng"
 
 msgid "Texture Format"
 msgstr "Định dạng hình kết cấu"

@@ -2608,8 +2608,8 @@ msgstr "ไม่พบเทมเพลตการดีบักแบบก
 msgid "Custom release template not found."
 msgstr "ไม่พบเทมเพลตการเผยแพร่ที่กำหนดเอง"
 
-msgid "On 32-bit exports the embedded PCK cannot be bigger than 4 GiB."
-msgstr "การส่งออกแบบ 32 bit PCK แบบฝังตัวไม่สามารถใหญ่ได้เกิน 4 GiB"
+msgid "On 32-bit exports the embedded TCK cannot be bigger than 4 GiB."
+msgstr "การส่งออกแบบ 32 bit TCK แบบฝังตัวไม่สามารถใหญ่ได้เกิน 4 GiB"
 
 msgid "Error requesting URL:"
 msgstr "ผิดพลาดขณะกำลังร้องขอ URL:"

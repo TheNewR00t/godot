@@ -1441,8 +1441,8 @@ msgstr "Väljalase"
 msgid "Binary Format"
 msgstr "Binaarne formaat"
 
-msgid "Embed PCK"
-msgstr "Manusta PCK"
+msgid "Embed TCK"
+msgstr "Manusta TCK"
 
 msgid "Texture Format"
 msgstr "Tekstuuriformaat"

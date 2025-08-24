@@ -36,31 +36,31 @@
 		<method name="get_encrypt_directory" qualifiers="const">
 			<return type="bool" />
 			<description>
-				Returns [code]true[/code], PCK directory encryption is enabled in the export dialog.
+				Returns [code]true[/code], TCK directory encryption is enabled in the export dialog.
 			</description>
 		</method>
 		<method name="get_encrypt_pck" qualifiers="const">
 			<return type="bool" />
 			<description>
-				Returns [code]true[/code], PCK encryption is enabled in the export dialog.
+				Returns [code]true[/code], TCK encryption is enabled in the export dialog.
 			</description>
 		</method>
 		<method name="get_encryption_ex_filter" qualifiers="const">
 			<return type="String" />
 			<description>
-				Returns file filters to exclude during PCK encryption.
+				Returns file filters to exclude during TCK encryption.
 			</description>
 		</method>
 		<method name="get_encryption_in_filter" qualifiers="const">
 			<return type="String" />
 			<description>
-				Returns file filters to include during PCK encryption.
+				Returns file filters to include during TCK encryption.
 			</description>
 		</method>
 		<method name="get_encryption_key" qualifiers="const">
 			<return type="String" />
 			<description>
-				Returns PCK encryption key.
+				Returns TCK encryption key.
 			</description>
 		</method>
 		<method name="get_exclude_filter" qualifiers="const">

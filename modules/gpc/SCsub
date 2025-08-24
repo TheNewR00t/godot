@@ -1,0 +1,10 @@
+# SCsub
+
+Import('env')
+
+sources = [
+    "register_types.cpp",
+    "gpc_packer.cpp",
+]
+
+env.add_source_files(env.modules_sources, sources)

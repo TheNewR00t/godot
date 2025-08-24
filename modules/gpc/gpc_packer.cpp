@@ -1,5 +1,7 @@
 #include "gpc_packer.h"
 
+#include "core/io/file_access_pack.h"
+
 bool gpc_enabled = false;
 
 void GPCPacker::_bind_methods() {

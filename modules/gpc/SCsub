@@ -1,10 +1,10 @@
 Import('env')
 
 gpc_sources = [
-    "file_access_gpc.cpp",
     "packed_source_gpc.cpp",
     "register_types.cpp",
     "aes/aes.c",
+    "gpc_export_plugin.cpp",
 ]
 
 env.add_source_files(env.modules_sources, gpc_sources)

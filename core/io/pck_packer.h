@@ -31,9 +31,8 @@
 #ifndef PCK_PACKER_H
 #define PCK_PACKER_H
 
+#include "core/io/file_access.h"
 #include "core/object/ref_counted.h"
-
-class FileAccess;
 
 class PCKPacker : public RefCounted {
 	GDCLASS(PCKPacker, RefCounted);

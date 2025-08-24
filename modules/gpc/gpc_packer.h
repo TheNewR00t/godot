@@ -6,10 +6,12 @@
 
 extern bool gpc_enabled;
 
+class PCKPacker;
+
 class GPCPacker : public RefCounted {
 	GDCLASS(GPCPacker, RefCounted);
 
-	Ref<PCKPacker> pck_packer;
+	PCKPacker *pck_packer;
 
 protected:
 	static void _bind_methods();

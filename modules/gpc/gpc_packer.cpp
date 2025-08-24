@@ -9,7 +9,7 @@ void GPCPacker::_bind_methods() {
 }
 
 Error GPCPacker::open(const String &p_path) {
-	pck_packer.instantiate();
+	pck_packer = memnew(PCKPacker);
 
 	// Obfuscated key
 	Vector<uint8_t> obfuscated_key;
@@ -108,7 +108,11 @@ Error GPCPacker::flush() {
 }
 
 GPCPacker::GPCPacker() {
+	pck_packer = nullptr;
 }
 
 GPCPacker::~GPCPacker() {
+	if (pck_packer) {
+		memdelete(pck_packer);
+	}
 }

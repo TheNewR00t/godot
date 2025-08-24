@@ -291,7 +291,7 @@ bool PackedSourcePCK::try_open_pack(const String &p_path, bool p_replace_files, 
 
 		Vector<uint8_t> key;
 		key.resize(32);
-		if (gpc_enabled) {
+		if (gpc_enabled && (pack_flags & PACK_FLAG_GPC_ENCRYPTED)) {
 			// Obfuscated key
 			Vector<uint8_t> obfuscated_key;
 			obfuscated_key.resize(32);

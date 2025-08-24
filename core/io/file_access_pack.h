@@ -45,6 +45,7 @@
 enum PackFlags {
 	PACK_DIR_ENCRYPTED = 1 << 0,
 	PACK_REL_FILEBASE = 1 << 1,
+	PACK_FLAG_GPC_ENCRYPTED = 1 << 2,
 };
 
 enum PackFileFlags {

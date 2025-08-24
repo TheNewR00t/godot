@@ -96,7 +96,7 @@ Error GPCPacker::open(const String &p_path) {
 		key_hex += String::num_int64(key[i], 16).pad_zeros(2);
 	}
 
-	return pck_packer->pck_start(p_path, 32, key_hex, true);
+	return pck_packer->pck_start(p_path, 32, key_hex, true, PACK_FLAG_GPC_ENCRYPTED);
 }
 
 Error GPCPacker::add_file(const String &p_target_path, const String &p_source_path) {

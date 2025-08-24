@@ -56,7 +56,7 @@ void PCKPacker::_bind_methods() {
 PCKPacker::PCKPacker() {
 }
 
-Error PCKPacker::pck_start(const String &p_pck_path, int p_alignment, const String &p_key, bool p_encrypt_directory) {
+Error PCKPacker::pck_start(const String &p_pck_path, int p_alignment, const String &p_key, bool p_encrypt_directory, uint32_t p_flags) {
 	ERR_FAIL_COND_V_MSG((p_key.is_empty() || !p_key.is_valid_hex_number(false) || p_key.length() != 64), ERR_CANT_CREATE, "Invalid Encryption Key (must be 64 characters long).");
 	ERR_FAIL_COND_V_MSG(p_alignment <= 0, ERR_CANT_CREATE, "Invalid alignment, must be greater then 0.");
 
@@ -98,7 +98,7 @@ Error PCKPacker::pck_start(const String &p_pck_path, int p_alignment, const Stri
 	file->store_32(VERSION_MINOR);
 	file->store_32(VERSION_PATCH);
 
-	uint32_t pack_flags = 0;
+	uint32_t pack_flags = p_flags;
 	if (enc_dir) {
 		pack_flags |= PACK_DIR_ENCRYPTED;
 	}
